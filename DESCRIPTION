@@ -1,10 +1,10 @@
 Package: sccthemes
-Title: What the Package Does (One Line, Title Case)
+Title: Style Suffolk County Council Graphics
 Version: 0.0.0.9000
 Authors@R: 
-    person("First", "Last", , "first.last@example.com", role = c("aut", "cre"),
+    person("Thomas", "Zwagerman", , "thomas.zwagerman@suffolk.gov.uk", role = c("aut", "cre"),
            comment = c(ORCID = "YOUR-ORCID-ID"))
-Description: What the package does (one paragraph).
+Description: R package that helps create and export ggplot2 graphics in the style used by the Suffolk County Council. Inspired by {bbplot}
 License: MIT + file LICENSE
 Encoding: UTF-8
 Roxygen: list(markdown = TRUE)
