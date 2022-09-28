@@ -36,9 +36,11 @@ scc_style <- function() {
       family = font, size = 18,
       color = "#222222"
     ),
-    axis.text.x = ggplot2::element_text(margin = ggplot2::margin(5,
-      b = 10
-    )),
+    axis.text.x = ggplot2::element_text(
+      margin = ggplot2::margin(
+        5,
+        b = 10
+      )),
     axis.ticks = ggplot2::element_blank(),
     axis.line = ggplot2::element_blank(),
 

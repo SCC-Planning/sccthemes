@@ -4,10 +4,10 @@
 \alias{scc_barchart_grouped}
 \title{Define a grouped barchart in scc colours}
 \usage{
-scc_barchart_grouped(data, x, y, group, title)
+scc_barchart_grouped(df_to_plot, x, y, group, title = NULL, subtitle = NULL)
 }
 \arguments{
-\item{data}{The dataframe provided}
+\item{df_to_plot}{The dataframe provided}
 
 \item{x}{The x-axis variable}
 
@@ -16,6 +16,8 @@ scc_barchart_grouped(data, x, y, group, title)
 \item{group}{the variable by which the chart should be grouped}
 
 \item{title}{The title that should go above the plot}
+
+\item{subtitle}{The subtitle that should go below the title}
 }
 \description{
 Define a grouped barchart in scc colours

@@ -4,16 +4,18 @@
 \alias{scc_barchart_pct}
 \title{Define barchart with \% values in scc colours}
 \usage{
-scc_barchart_pct(data, x, y, title)
+scc_barchart_pct(df_to_plot, x, y, title = NULL, subtitle = NULL)
 }
 \arguments{
-\item{data}{The dataframe provided}
+\item{df_to_plot}{The dataframe provided}
 
 \item{x}{The x-axis variable}
 
 \item{y}{The y-axis variable}
 
 \item{title}{The title that should go above the plot}
+
+\item{subtitle}{The subtitle that should go below the title}
 }
 \description{
 Define barchart with \% values in scc colours

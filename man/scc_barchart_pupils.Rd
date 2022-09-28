@@ -4,16 +4,18 @@
 \alias{scc_barchart_pupils}
 \title{Define barchart in scc colours, specifically for pupil/population numbers}
 \usage{
-scc_barchart_pupils(data, x, y, title)
+scc_barchart_pupils(df_to_plot, x, y, title = NULL, subtitle = NULL)
 }
 \arguments{
-\item{data}{The dataframe provided}
+\item{df_to_plot}{The dataframe provided}
 
 \item{x}{The x-axis variable}
 
 \item{y}{The y-axis variable}
 
 \item{title}{The title that should go above the plot}
+
+\item{subtitle}{The subtitle that should go below the title}
 }
 \description{
 Define barchart in scc colours, specifically for pupil/population numbers
