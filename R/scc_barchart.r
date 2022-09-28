@@ -4,6 +4,8 @@
 #' @param x The x-axis variable
 #' @param y The y-axis variable
 #' @param title The title that should go above the plot
+#'
+#' @export
 scc_barchart <- function(data, x, y, title) {
   p1 <- data |>
     ggplot2::ggplot(ggplot2::aes(x = x, y = y)) +
@@ -34,6 +36,8 @@ scc_barchart <- function(data, x, y, title) {
 #' @param x The x-axis variable
 #' @param y The y-axis variable
 #' @param title The title that should go above the plot
+#'
+#' @export
 scc_barchart_pct <- function(data, x, y, title) {
   p1 <- data |>
     ggplot2::ggplot(ggplot2::aes(x = x, y = y)) +
@@ -65,6 +69,8 @@ scc_barchart_pct <- function(data, x, y, title) {
 #' @param y The y-axis variable
 #' @param group the variable by which the chart should be grouped
 #' @param title The title that should go above the plot
+#'
+#' @export
 scc_barchart_grouped <- function(data, x, y, group, title) {
   p1 <- data |>
     ggplot2::ggplot(ggplot2::aes(x = x, y = y, fill = as.factor(group))) +
@@ -81,6 +87,8 @@ scc_barchart_grouped <- function(data, x, y, group, title) {
 #' @param x The x-axis variable
 #' @param y The y-axis variable
 #' @param title The title that should go above the plot
+#'
+#' @export
 scc_barchart_pupils <- function(data, x, y, title) {
   p1 <- data |>
     ggplot2::ggplot(ggplot2::aes(x = x, y = y)) +
@@ -108,6 +116,8 @@ scc_barchart_pupils <- function(data, x, y, title) {
 #' @param x The x-axis variable
 #' @param y The y-axis variable
 #' @param title The title that should go above the plot
+#'
+#' @export
 scc_barchart_pupils_hor <- function(data, x, y, title) {
   p1 <- data |>
     ggplot2::ggplot(ggplot2::aes(x = x, y = y)) +

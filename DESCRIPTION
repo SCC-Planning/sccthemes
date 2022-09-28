@@ -4,7 +4,7 @@ Version: 0.0.0.9000
 Authors@R: 
     person("Thomas", "Zwagerman", , "thomas.zwagerman@suffolk.gov.uk", role = c("aut", "cre"),
            comment = c(ORCID = "YOUR-ORCID-ID"))
-Description: R package that helps create and export ggplot2 graphics in the style used by the Suffolk County Council. Inspired by {bbplot}
+Description: R package that helps create and export ggplot2 graphics in the style used by the Suffolk County Council. Inspired by {bbplot}.
 License: MIT + file LICENSE
 Encoding: UTF-8
 Roxygen: list(markdown = TRUE)

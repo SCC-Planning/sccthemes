@@ -3,8 +3,11 @@
 #' @details Defines a ggplot2 style using SCC font, ensuring consistent
 #' font size styling, colours and plot margin
 #'
+#' @export
 scc_style <- function() {
   font <- "Source Sans Pro"
+  get_scc_font()
+
   ggplot2::theme(
     # Title and subtitle styling
     plot.title = ggplot2::element_text(
