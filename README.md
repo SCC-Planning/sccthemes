@@ -97,6 +97,8 @@ scc_barchart(
 Currently, there are helper functions for the following plot types:
 
 - Barplots
+- Piecharts (but why you [should discourage their use if you
+  can](https://www.data-to-viz.com/caveat/pie.html))
 
 The BBC’s [“ggplot
 cookbook”](https://bbc.github.io/rcookbook/#make_a_bar_chart) is a good
