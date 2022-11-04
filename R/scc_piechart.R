@@ -9,6 +9,7 @@
 #' @export
 scc_piechart <- function(df, value, group, title = NULL, subtitle = NULL) {
   requireNamespace("forcats", quietly = TRUE)
+  requireNamespace("ggrepel", quietly = TRUE)
 
   df <- df |>
     dplyr::arrange(dplyr::desc(group)) |>
@@ -28,7 +29,7 @@ scc_piechart <- function(df, value, group, title = NULL, subtitle = NULL) {
     ggplot2::geom_col(width = 1, color = 1) +
     ggplot2::coord_polar(theta = "y") +
     ggplot2::scale_fill_viridis_d() +
-    ggplot2::geom_label_repel(
+    ggrepel::geom_label_repel(
       data = df2,
       ggplot2::aes(y = pos, label = paste0(round(value, 1), "%")),
       fill = "white", size = 18, nudge_x = 1, show.legend = FALSE

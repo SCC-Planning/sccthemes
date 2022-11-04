@@ -12,11 +12,11 @@ scc_style <- function() {
     # Title and subtitle styling
     plot.title = ggplot2::element_text(
       family = font,
-      size = 56, face = "bold", color = "#222222"
+      size = 36, face = "bold", color = "#222222"
     ),
     plot.subtitle = ggplot2::element_text(
       family = font,
-      size = 44, margin = ggplot2::margin(9, 0, 9, 0)
+      size = 24, margin = ggplot2::margin(9, 0, 9, 0)
     ),
     plot.caption = ggplot2::element_blank(),
 
@@ -26,18 +26,18 @@ scc_style <- function() {
     legend.title = ggplot2::element_blank(),
     legend.key = ggplot2::element_blank(),
     legend.text = ggplot2::element_text(
-      family = font, size = 36,
+      family = font, size = 24,
       color = "#222222"
     ),
 
     # Axis styling
     axis.title = ggplot2::element_blank(),
     axis.text = ggplot2::element_text(
-      family = font, size = 36,
+      family = font, size = 24,
       color = "#222222"
     ),
     axis.text.x = ggplot2::element_text(
-      size = 36,
+      size = 24,
       margin = ggplot2::margin(
         5,
         b = 20
@@ -53,6 +53,6 @@ scc_style <- function() {
 
     # Strip text styling, ie facet text
     strip.background = ggplot2::element_rect(fill = "white"),
-    strip.text = ggplot2::element_text(size = 52, hjust = 0)
+    strip.text = ggplot2::element_text(size = 24, hjust = 0)
   )
 }
