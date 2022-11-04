@@ -29,5 +29,4 @@ get_scc_font <- function() {
   )
 
   showtext::showtext_auto()
-
 }

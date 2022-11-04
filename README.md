@@ -1,7 +1,7 @@
 
 <!-- README.md is generated from README.Rmd. Please edit that file -->
 
-# sccthemes
+# sccthemes <img src="inst/figures/scc-hex.png" align="right" width="120"/>
 
 <!-- badges: start -->
 
@@ -27,7 +27,7 @@ You can install the development version of sccthemes from
 devtools::install_github("thomaszwagerman/sccthemes")
 ```
 
-## Suffolk County Council
+## Suffolk County Council brand and styling
 
 The font and colour codes have been sourced from the [Suffolk County
 Council’s website](https://www.suffolk.gov.uk/), and Google Chrome’s
@@ -152,8 +152,8 @@ finalise_ggplot(
   plot_to_save,
   source = "Jennifer Bryan, 2017, Gapminder R package, https://github.com/jennybc/gapminder",
   save_filepath = "inst/plots/publish_plot_example.png",
-  width_pixels = 640,
-  height_pixels = 450
+  width_pixels = 320,
+  height_pixels = 225
 )
 ```
 
