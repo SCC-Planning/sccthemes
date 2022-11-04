@@ -42,7 +42,7 @@ scc_piechart <- function(df, value, group, title = NULL, subtitle = NULL) {
     ggplot2::theme(
       axis.text.x = ggplot2::element_blank(),
       panel.grid.major.y = ggplot2::element_blank(),
-      legend.position = "left", legend.text.align = 0
+      legend.position = "right", legend.text.align = 0
     )
 
   return(p1)

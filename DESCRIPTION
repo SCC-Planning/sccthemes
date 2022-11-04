@@ -16,4 +16,5 @@ Imports:
     sysfonts
 Suggests: 
     forcats,
+    ggpubr,
     ggrepel
