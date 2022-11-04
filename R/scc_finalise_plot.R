@@ -44,7 +44,7 @@ create_footer <- function(source_name) {
       y = grid::unit(1.1, "npc")
     ),
     grid::textGrob(
-      source_name,
+      paste("Source:", source_name),
       x = 0.004,
       hjust = 0,
       gp = grid::gpar(fontsize = 16)

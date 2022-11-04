@@ -110,7 +110,7 @@ Once you have created your plot and are happy with it, you can use `finalise_ggp
 
 Also you might want to use the same plot for different purpose: the size of a plot in a presentation will need to be a different size from one in a report. `finalise_ggplot()` allows for this without having to change the original plot.
 
-```{r finalise_ggplot}
+```{r finalise_ggplot, warning = FALSE, message = FALSE, fig.show = "hide"}
 library(ggplot2)
 library(gapminder)
 library(dplyr)
@@ -138,6 +138,8 @@ finalise_ggplot(
 )
 
 ```
+<p align="center"><img src="inst/plots/publish_plot_example.png"></p>
+
 
 ## A note on colour palettes, branding and accessibility
 ### Putting thought into requirements and responsibilities
@@ -159,7 +161,7 @@ Blue and Orange are colours that are distinct for most common forms of colour bl
 ### No need to reinvent the wheel - use **Viridis**
 Therefore, instead of designing our own colour palette, I'd recommend the use of [viridis](https://github.com/sjmgarnier/viridis), for graphs with more than three categories. This package has visually appealing colour palettes, and improve graph readability for readers with **common** forms of color blindness and/or color vision deficiency. Note that for some specific forms, you may have to choose another palette within viridis (for example [seaborn](https://seaborn.pydata.org/tutorial/color_palettes.html), or [turbo](https://ai.googleblog.com/2019/08/turbo-improved-rainbow-colormap-for.html)).
 
-```{r}
+```{r viridis_example, warning = FALSE, message = FALSE}
 library(sccthemes)
 library(gapminder)
 library(dplyr)

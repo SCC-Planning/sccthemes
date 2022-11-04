@@ -155,14 +155,11 @@ finalise_ggplot(
   width_pixels = 640,
   height_pixels = 450
 )
-#> Warning: Use of `df_to_plot[[x]]` is discouraged. Use `.data[[x]]` instead.
-#> Warning: Use of `df_to_plot[[y]]` is discouraged. Use `.data[[y]]` instead.
-#> Use of `df_to_plot[[y]]` is discouraged. Use `.data[[y]]` instead.
-#> Use of `df_to_plot[[y]]` is discouraged. Use `.data[[y]]` instead.
-#> Warning: Use of `df_to_plot[[x]]` is discouraged. Use `.data[[x]]` instead.
 ```
 
-<img src="man/figures/README-finalise_ggplot-1.png" width="100%" />
+<p align="center">
+<img src="inst/plots/publish_plot_example.png">
+</p>
 
 ## A note on colour palettes, branding and accessibility
 
@@ -220,7 +217,6 @@ asia_pop <- gapminder |>
   filter(year == 1997 & continent == "Asia") |> 
   select(country, lifeExp, pop, gdpPercap) |> 
   top_n(5)
-#> Selecting by gdpPercap
 
 asia_pop$country <- forcats::fct_drop(asia_pop$country)
 
@@ -233,7 +229,7 @@ scc_piechart(
   )
 ```
 
-<img src="man/figures/README-unnamed-chunk-2-1.png" width="100%" />
+<img src="man/figures/README-viridis_example-1.png" width="100%" />
 
 ## Future additions to this package
 
