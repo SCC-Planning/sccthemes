@@ -18,7 +18,5 @@ Suggests:
     forcats,
     ggpubr,
     ggrepel
-LinkingTo: 
-    hexSticker
 Enhances: 
     hexSticker

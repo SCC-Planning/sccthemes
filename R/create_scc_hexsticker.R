@@ -1,10 +1,24 @@
-create_scc_sticker <- function(imgurl) {
+#' Creating an scc style sticker for R packages
+#'
+#' @param imgurl url of the scc logo
+#' @param package_name name of the package
+#'
+#' @export
+#'
+#' @example
+#' /dontrun{
+#' create_scc_sticker(
+#' imgurl = "inst/logo/scc_logo.png",
+#' package_name = "sccthemes"
+#' )
+#' }
+create_scc_sticker <- function(imgurl, package_name) {
 
   get_scc_font()
 
   hexSticker::sticker(
     imgurl,
-    package = "sccthemes",
+    package = package_name,
     p_size = 15,
     p_fontface = "bold",
     s_x = 1,
@@ -15,6 +29,6 @@ create_scc_sticker <- function(imgurl) {
     p_y = 0.77,
     h_fill = "#2d6ca2",
     h_color = "#e8850c",
-    p_family = "ssp_font", filename="inst/figures/scc-hex.png"
+    p_family = "font", filename="inst/figures/scc-hex.png"
   )
 }
