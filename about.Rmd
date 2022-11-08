@@ -1,0 +1,15 @@
+---
+title: "Examples"
+author:
+  - name: Thomas Zwagerman
+    url: https://github.com/thomaszwagerman
+    affiliation: Suffolk County Council
+    affiliation_url: https://www.suffolk.gov.uk/
+date: "`r Sys.Date()`"
+---
+
+The goal of sccthemes is to provide a consistent styling framework and helper functions for graphics made in ggplot at the Suffolk County Council.
+
+This package has been heavily inspired by [bbplot](https://github.com/bbc/bbplot), the BBC's R package for creating and exporting graphics made in ggplot.
+
+This cookbook is a work in progress. The BBC's ["ggplot cookbook"](https://bbc.github.io/rcookbook/#make_a_bar_chart) is a good starting point to use as a reference.

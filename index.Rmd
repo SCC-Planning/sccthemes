@@ -1,5 +1,5 @@
 ---
-title: "index"
+title: "SCC Cookbook"
 author:
   - name: Thomas Zwagerman
     url: https://github.com/thomaszwagerman

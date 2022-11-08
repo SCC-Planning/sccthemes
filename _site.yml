@@ -11,6 +11,12 @@ navbar:
       href: index.html
     - text: "Style Guide"
       href: style_guide.html
+    - text: "Colour Guidance"
+      href: colour_guidance.html
+    - text: "Examples"
+      href: examples.html
+    - text: "About"
+      href: about.html
 output:
   distill::distill_article:
     toc: true
