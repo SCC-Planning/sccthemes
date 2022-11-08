@@ -134,7 +134,7 @@ finalise_ggplot(
   source = "Jennifer Bryan, 2017, Gapminder R package, https://github.com/jennybc/gapminder",
   save_filepath = "inst/plots/publish_plot_example.png",
   width_pixels = 225,
-  height_pixels = 175
+  height_pixels = 165
 )
 
 ```

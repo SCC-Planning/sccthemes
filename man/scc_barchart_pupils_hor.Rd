@@ -4,7 +4,14 @@
 \alias{scc_barchart_pupils_hor}
 \title{Define horizontal barchart in scc colours}
 \usage{
-scc_barchart_pupils_hor(df_to_plot, x, y, title = NULL, subtitle = NULL)
+scc_barchart_pupils_hor(
+  df_to_plot,
+  x,
+  y,
+  title = NULL,
+  subtitle = NULL,
+  format = "report"
+)
 }
 \arguments{
 \item{df_to_plot}{The dataframe provided}
@@ -16,6 +23,9 @@ scc_barchart_pupils_hor(df_to_plot, x, y, title = NULL, subtitle = NULL)
 \item{title}{The title that should go above the plot}
 
 \item{subtitle}{The subtitle that should go below the title}
+
+\item{format}{can be one of "report", "presentation" or "tweet". Will adjust
+font sizes approriately for that format.}
 }
 \description{
 Define horizontal barchart in scc colours

@@ -4,7 +4,14 @@
 \alias{scc_piechart}
 \title{Define piechart in scc colours}
 \usage{
-scc_piechart(df, value, group, title = NULL, subtitle = NULL)
+scc_piechart(
+  df,
+  value,
+  group,
+  title = NULL,
+  subtitle = NULL,
+  format = "report"
+)
 }
 \arguments{
 \item{df}{The dataframe provided}
@@ -16,6 +23,9 @@ scc_piechart(df, value, group, title = NULL, subtitle = NULL)
 \item{title}{The title that should go above the plot}
 
 \item{subtitle}{The subtitle that should go below the title}
+
+\item{format}{can be one of "report", "presentation" or "tweet". Will adjust
+font sizes approriately for that format.}
 }
 \description{
 Define piechart in scc colours

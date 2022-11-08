@@ -4,14 +4,6 @@
 #' @param package_name name of the package
 #'
 #' @export
-#'
-#' @example
-#' /dontrun{
-#' create_scc_sticker(
-#' imgurl = "inst/logo/scc_logo.png",
-#' package_name = "sccthemes"
-#' )
-#' }
 create_scc_sticker <- function(imgurl, package_name) {
 
   get_scc_font()

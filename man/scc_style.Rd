@@ -4,7 +4,11 @@
 \alias{scc_style}
 \title{Defince scc style for ggplot2}
 \usage{
-scc_style()
+scc_style(format = "report")
+}
+\arguments{
+\item{format}{can be one of "report", "presentation" or "tweet". Will adjust
+font sizes approriately for that format.}
 }
 \description{
 Defince scc style for ggplot2
