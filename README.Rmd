@@ -32,6 +32,10 @@ You can install the development version of sccthemes from [GitHub](https://githu
 devtools::install_github("thomaszwagerman/sccthemes")
 ```
 
+## SCC Cookbook
+
+You can find the full [SCC Cookbook](https://thomaszwagerman.github.io/sccthemes/). This is a work in progress.
+
 ## Suffolk County Council brand and styling
 The font and colour codes have been sourced from the [Suffolk County Council's website](https://www.suffolk.gov.uk/), and Google Chrome's Inspect functionality (Ctrl + Shift + i).
 

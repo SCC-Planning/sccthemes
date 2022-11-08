@@ -1,11 +1,12 @@
 name: "sccthemes"
 output_dir: "docs"
+exclude: ["README.Rmd", "README.md", "README.knit"]
 navbar:
   title: "SCC Cookbook"
   logo:
-    image: logo.png
+    image: inst/logo/scc_logo.png
     href: https://thomaszwagerman.github.io/sccthemes/
-  right:
+  left:
     - text: "Home"
       href: index.html
     - text: "Style Guide"
