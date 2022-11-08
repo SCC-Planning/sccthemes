@@ -1,35 +1,75 @@
 ---
 title: "scccookbook"
-  knit: (function(input_file, encoding) {
-    out_dir <- 'docs';
-    rmarkdown::render(input_file,
-      encoding=encoding,
-      output_file=file.path(dirname(input_file), out_dir, 'index.html'))})
+knit: (function(input_file, encoding) {
+  out_dir <- 'docs';
+  rmarkdown::render(input_file,
+    encoding = encoding,
+    output_file = file.path(dirname(input_file), out_dir, 'index.html'))})
 author: "Thomas Zwagerman"
 date: "`r Sys.Date()`"
 output: html_document
 ---
 
-```{r setup, include=FALSE}
-knitr::opts_chunk$set(echo = TRUE)
+```{r, include = FALSE}
+knitr::opts_chunk$set(
+  collapse = TRUE,
+  comment = "#>",
+  fig.path = "man/figures/README-",
+  out.width = "100%"
+)
 ```
 
-## R Markdown
+# sccthemes <img src="inst/figures/scc-hex.png" align="right" width="120"/>
 
-This is an R Markdown document. Markdown is a simple formatting syntax for authoring HTML, PDF, and MS Word documents. For more details on using R Markdown see <http://rmarkdown.rstudio.com>.
+<!-- badges: start -->
+[![Lifecycle: experimental](https://img.shields.io/badge/lifecycle-experimental-orange.svg)](https://lifecycle.r-lib.org/articles/stages.html#experimental)
+<!-- badges: end -->
 
-When you click the **Knit** button a document will be generated that includes both content as well as the output of any embedded R code chunks within the document. You can embed an R code chunk like this:
+The goal of sccthemes is to provide a consistent styling framework and helper functions for graphics made in ggplot at the Suffolk County Council.
 
-```{r cars}
-summary(cars)
+This package has been heavily inspired by [bbplot](https://github.com/bbc/bbplot), the BBC's R package for creating and exporting graphics made in ggplot.
+
+## Installation
+
+You can install the development version of sccthemes from [GitHub](https://github.com/) with:
+
+``` r
+# install.packages("devtools")
+devtools::install_github("thomaszwagerman/sccthemes")
 ```
 
-## Including Plots
+## Suffolk County Council brand and styling
+The font and colour codes have been sourced from the [Suffolk County Council's website](https://www.suffolk.gov.uk/), and Google Chrome's Inspect functionality (Ctrl + Shift + i).
 
-You can also embed plots, for example:
+The style can be called to any ggplot2 object using `scc_style()`
 
-```{r pressure, echo=FALSE}
-plot(pressure)
+```{r style_example, warning = FALSE, message = FALSE}
+library(ggplot2)
+library(gapminder)
+library(dplyr)
+library(sccthemes)
+
+barchart_data <- gapminder |> 
+  filter(year == 2007 & continent == "Europe") |> 
+  arrange(desc(gdpPercap)) |> 
+  head(5)
+
+barchart_data |> 
+  ggplot(aes(x = country, y = gdpPercap)) +
+  geom_bar(
+    stat = "identity",
+    position = "identity",
+    color = "#333333",
+    fill = "#428bca"
+  ) +
+  geom_hline(
+    yintercept =  0,
+    size = 1,
+    colour = "#333333"
+  ) +
+  scc_style() +
+  labs(
+    title = "Europe's Richest Countries",
+    subtitle = "GDP per Capita, 2007"
+  )
 ```
-
-Note that the `echo = FALSE` parameter was added to the code chunk to prevent printing of the R code that generated the plot.
