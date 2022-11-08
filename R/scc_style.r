@@ -1,43 +1,59 @@
 #' Defince scc style for ggplot2
 #'
+#' @param format can be one of "report", "presentation" or "tweet". Will adjust
+#' font sizes approriately for that format.
+#'
 #' @details Defines a ggplot2 style using SCC font, ensuring consistent
 #' font size styling, colours and plot margin
 #'
 #' @export
-scc_style <- function() {
+scc_style <- function(format = "report") {
+
+  stopifnot(
+    format %in% c("report", "presentation", "tweet")
+  )
+
   font <- "Source Sans Pro"
   get_scc_font()
+
+  text_size <- ifelse(format == "report", 12, 24)
+  title_size <- ifelse(format == "report", 18, 36)
 
   ggplot2::theme(
     # Title and subtitle styling
     plot.title = ggplot2::element_text(
       family = font,
-      size = 36, face = "bold", color = "#222222"
+      size = title_size,
+      face = "bold", color = "#222222"
     ),
     plot.subtitle = ggplot2::element_text(
       family = font,
-      size = 24, margin = ggplot2::margin(9, 0, 9, 0)
+      size = text_size,
+      margin = ggplot2::margin(9, 0, 9, 0)
     ),
     plot.caption = ggplot2::element_blank(),
 
     # Legend styling
-    legend.position = "top", legend.text.align = 0,
+    legend.position = "top",
+    legend.text.align = 0,
     legend.background = ggplot2::element_blank(),
     legend.title = ggplot2::element_blank(),
     legend.key = ggplot2::element_blank(),
     legend.text = ggplot2::element_text(
-      family = font, size = 24,
+      family = font,
+      size = text_size,
       color = "#222222"
     ),
 
     # Axis styling
     axis.title = ggplot2::element_blank(),
     axis.text = ggplot2::element_text(
-      family = font, size = 24,
+      family = font,
+      size = text_size,
       color = "#222222"
     ),
     axis.text.x = ggplot2::element_text(
-      size = 24,
+      size = text_size,
       margin = ggplot2::margin(
         5,
         b = 20
@@ -53,6 +69,6 @@ scc_style <- function() {
 
     # Strip text styling, ie facet text
     strip.background = ggplot2::element_rect(fill = "white"),
-    strip.text = ggplot2::element_text(size = 24, hjust = 0)
+    strip.text = ggplot2::element_text(size = text_size, hjust = 0)
   )
 }

@@ -5,10 +5,18 @@
 #' @param y The y-axis variable
 #' @param title The title that should go above the plot
 #' @param subtitle The subtitle that should go below the title
+#' @param format can be one of "report", "presentation" or "tweet". Will adjust
+#' font sizes approriately for that format.
 #'
 #' @export
-scc_barchart <- function(df_to_plot, x, y, title = NULL, subtitle = NULL) {
-
+scc_barchart <- function(
+    df_to_plot,
+    x,
+    y,
+    title = NULL,
+    subtitle = NULL,
+    format = "report"
+) {
   if (class(x) != "character") {
     x <- as.character(x)
   }
@@ -46,7 +54,7 @@ scc_barchart <- function(df_to_plot, x, y, title = NULL, subtitle = NULL) {
     ) +
     scc_style()
   return(p1)
-  }
+}
 
 #' Define barchart with % values in scc colours
 #'
@@ -55,13 +63,24 @@ scc_barchart <- function(df_to_plot, x, y, title = NULL, subtitle = NULL) {
 #' @param y The y-axis variable
 #' @param title The title that should go above the plot
 #' @param subtitle The subtitle that should go below the title
+#' @param format can be one of "report", "presentation" or "tweet". Will adjust
+#' font sizes approriately for that format.
 #'
 #' @export
-scc_barchart_pct <- function(df_to_plot, x, y, title = NULL, subtitle = NULL) {
+scc_barchart_pct <- function(
+    df_to_plot,
+    x,
+    y,
+    title = NULL,
+    subtitle = NULL,
+    format = "report"
+) {
   p1 <- df_to_plot |>
     ggplot2::ggplot(
       ggplot2::aes(
-        x = df_to_plot[[x]], y = df_to_plot[[y]])) +
+        x = df_to_plot[[x]], y = df_to_plot[[y]]
+      )
+    ) +
     ggplot2::geom_col(
       position = "identity",
       colour = "#333333",
@@ -82,7 +101,7 @@ scc_barchart_pct <- function(df_to_plot, x, y, title = NULL, subtitle = NULL) {
       title = title,
       subtitle = subtitle
     ) +
-    scc_style()
+    scc_style(format)
   return(p1)
 }
 
@@ -94,18 +113,31 @@ scc_barchart_pct <- function(df_to_plot, x, y, title = NULL, subtitle = NULL) {
 #' @param group the variable by which the chart should be grouped
 #' @param title The title that should go above the plot
 #' @param subtitle The subtitle that should go below the title
+#' @param format can be one of "report", "presentation" or "tweet". Will adjust
+#' font sizes approriately for that format.
 #'
 #' @export
-scc_barchart_grouped <- function(df_to_plot, x, y, group, title = NULL, subtitle = NULL) {
+scc_barchart_grouped <- function(
+    df_to_plot,
+    x,
+    y,
+    group,
+    title = NULL,
+    subtitle = NULL,
+    format = "report"
+) {
   p1 <- df_to_plot |>
     ggplot2::ggplot(
       ggplot2::aes(
         x = df_to_plot[[x]],
         y = df_to_plot[[y]],
-        fill = as.factor(df_to_plot[[group]]))) +
+        fill = as.factor(df_to_plot[[group]])
+      )
+    ) +
     ggplot2::geom_col(
       position = "dodge",
-      colour = "#333333") +
+      colour = "#333333"
+    ) +
     ggplot2::geom_hline(
       yintercept = 0,
       size = 1,
@@ -114,7 +146,8 @@ scc_barchart_grouped <- function(df_to_plot, x, y, group, title = NULL, subtitle
     ggplot2::labs(
       title = title,
       subtitle = subtitle
-    ) +    scc_style()
+    ) +
+    scc_style(format)
   return(p1)
 }
 
@@ -125,9 +158,17 @@ scc_barchart_grouped <- function(df_to_plot, x, y, group, title = NULL, subtitle
 #' @param y The y-axis variable
 #' @param title The title that should go above the plot
 #' @param subtitle The subtitle that should go below the title
-#'
+#' @param format can be one of "report", "presentation" or "tweet". Will adjust
+#' font sizes approriately for that format.
 #' @export
-scc_barchart_pupils <- function(df_to_plot, x, y, title = NULL, subtitle = NULL) {
+scc_barchart_pupils <- function(
+    df_to_plot,
+    x,
+    y,
+    title = NULL,
+    subtitle = NULL,
+    format = "report"
+) {
   p1 <- df_to_plot |>
     ggplot2::ggplot(
       ggplot2::aes(
@@ -152,7 +193,7 @@ scc_barchart_pupils <- function(df_to_plot, x, y, title = NULL, subtitle = NULL)
       subtitle = subtitle
     ) +
     ggplot2::coord_flip() +
-    scc_style()
+    scc_style(format)
   return(p1)
 }
 
@@ -163,9 +204,18 @@ scc_barchart_pupils <- function(df_to_plot, x, y, title = NULL, subtitle = NULL)
 #' @param y The y-axis variable
 #' @param title The title that should go above the plot
 #' @param subtitle The subtitle that should go below the title
+#' @param format can be one of "report", "presentation" or "tweet". Will adjust
+#' font sizes approriately for that format.
 #'
 #' @export
-scc_barchart_pupils_hor <- function(df_to_plot, x, y, title = NULL, subtitle = NULL) {
+scc_barchart_pupils_hor <- function(
+    df_to_plot,
+    x,
+    y,
+    title = NULL,
+    subtitle = NULL,
+    format = "report"
+) {
   p1 <- df_to_plot |>
     ggplot2::ggplot(
       ggplot2::aes(
@@ -180,11 +230,12 @@ scc_barchart_pupils_hor <- function(df_to_plot, x, y, title = NULL, subtitle = N
     ggplot2::geom_hline(
       yintercept = 0,
       size = 1,
-      colour = "#333333") +
+      colour = "#333333"
+    ) +
     ggplot2::labs(
       title = title,
       subtitle = subtitle
     ) +
-    scc_style()
+    scc_style(format)
   return(p1)
 }

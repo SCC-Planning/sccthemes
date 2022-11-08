@@ -5,11 +5,23 @@
 #' @param group The associated group for each value
 #' @param title The title that should go above the plot
 #' @param subtitle The subtitle that should go below the title
+#' @param format can be one of "report", "presentation" or "tweet". Will adjust
+#' font sizes approriately for that format.
 #'
 #' @export
-scc_piechart <- function(df, value, group, title = NULL, subtitle = NULL) {
+scc_piechart <- function(
+    df,
+    value,
+    group,
+    title = NULL,
+    subtitle = NULL,
+    format = "report"
+) {
   requireNamespace("forcats", quietly = TRUE)
   requireNamespace("ggrepel", quietly = TRUE)
+
+  font <- "Source Sans Pro"
+  get_scc_font()
 
   df <- df |>
     dplyr::arrange(dplyr::desc(group)) |>
@@ -32,13 +44,13 @@ scc_piechart <- function(df, value, group, title = NULL, subtitle = NULL) {
     ggrepel::geom_label_repel(
       data = df2,
       ggplot2::aes(y = pos, label = paste0(round(value, 1), "%")),
-      fill = "white", size = 18, nudge_x = 1, show.legend = FALSE
+      fill = "white", nudge_x = 1, show.legend = FALSE
     ) +
     ggplot2::labs(
       title = title,
       subtitle = subtitle
     ) +
-    scc_style() +
+    scc_style(format) +
     ggplot2::theme(
       axis.text.x = ggplot2::element_blank(),
       panel.grid.major.y = ggplot2::element_blank(),
