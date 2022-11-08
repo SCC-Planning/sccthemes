@@ -1,0 +1,35 @@
+---
+title: "index"
+author:
+  - name: Thomas Zwagerman
+    url: https://github.com/thomaszwagerman
+    affiliation: Suffolk County Council
+    affiliation_url: https://www.suffolk.gov.uk/
+date: "`r Sys.Date()`"
+---
+```{r, include = FALSE}
+knitr::opts_chunk$set(
+  collapse = TRUE,
+  comment = "#>",
+  fig.path = "man/figures/README-",
+  out.width = "100%"
+)
+```
+
+# sccthemes <img src="inst/figures/scc-hex.png" align="right" width="120"/>
+
+<!-- badges: start -->
+[![Lifecycle: experimental](https://img.shields.io/badge/lifecycle-experimental-orange.svg)](https://lifecycle.r-lib.org/articles/stages.html#experimental)
+<!-- badges: end -->
+
+The goal of sccthemes is to provide a consistent styling framework and helper functions for graphics made in ggplot at the Suffolk County Council.
+
+This package has been heavily inspired by [bbplot](https://github.com/bbc/bbplot), the BBC's R package for creating and exporting graphics made in ggplot.
+
+## Installation
+
+You can install the development version of sccthemes from [GitHub](https://github.com/) with:
+
+``` r
+# install.packages("devtools")
+devtools::install_github("thomaszwagerman/sccthemes")
