@@ -17,6 +17,8 @@ Imports:
 Suggests: 
     forcats,
     ggpubr,
-    ggrepel
+    ggrepel,
+    testthat (>= 3.0.0)
 Enhances: 
     hexSticker
+Config/testthat/edition: 3
