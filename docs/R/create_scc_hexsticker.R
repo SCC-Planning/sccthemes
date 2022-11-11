@@ -2,9 +2,10 @@
 #'
 #' @param imgurl url of the scc logo
 #' @param package_name name of the package
+#' @param font name of the font, ie "Source Sans Pro"
 #'
 #' @export
-create_scc_sticker <- function(imgurl, package_name) {
+create_scc_sticker <- function(imgurl, package_name, font) {
 
   get_scc_font()
 
@@ -21,6 +22,6 @@ create_scc_sticker <- function(imgurl, package_name) {
     p_y = 0.77,
     h_fill = "#2d6ca2",
     h_color = "#e8850c",
-    p_family = "font", filename="inst/figures/scc-hex.png"
+    p_family = font, filename="inst/figures/scc-hex.png"
   )
 }

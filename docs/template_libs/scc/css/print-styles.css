@@ -1,0 +1,72 @@
+@media print {
+
+	* {
+		margin:0;
+		padding:0
+	}
+
+	body {
+		background: #fff;
+	}
+	
+	.site-header,
+	.nav-tabs,
+	.k_container,
+	.kampyle,
+	#k_popup,
+	.footer-wrapper,
+	.translate,
+	.right-column
+	{
+		display: none !important;
+	}
+
+	.panel-group .panel-heading .panel-title > a:after,
+	.panel-group .panel-heading .panel-title > a.collapsed:after
+	{
+		content: " ";
+	}
+
+	.panel-group .panel-heading
+	{
+		color: #000;
+		background: #fff;
+		border-bottom: 2px solid #000;
+	}
+
+	.content-page-wrapper .page-content .left-column table
+	{
+		width: 100% !important;
+	}
+
+	.panel-group .panel-heading h4
+	{
+		font-size: 22px;
+		padding: 0 0 5px 0;
+		margin: 0 0 5px 0;
+	}
+
+	.panel-group .panel-heading .panel-title > a
+	{
+		color: #000;
+		text-decoration: none;
+	}
+
+	.content-page-wrapper,
+	.content-page-wrapper .page-intro {
+		padding: 0;
+	}
+
+	.content-page-wrapper .page-content
+	{
+		padding-top: 10px;
+	}
+
+	.hidden-print {
+		display: none !important;
+	}
+
+	#kampyleButtonContainer {
+		display: none !important;
+	}
+}

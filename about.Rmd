@@ -1,11 +1,17 @@
 ---
-title: "Examples"
-author:
-  - name: Thomas Zwagerman
-    url: https://github.com/thomaszwagerman
-    affiliation: Suffolk County Council
-    affiliation_url: https://www.suffolk.gov.uk/
+title: "About"
 date: "`r Sys.Date()`"
+scctemplate:
+  header:
+    site_branding: "Suffolk County Council"
+  navigation:
+    breadcrumb_trail:
+      - href: "index.html"
+        text: "Home"
+      - text: "About"
+    toc:
+      sticky: false
+      numbered: false
 ---
 
 The goal of sccthemes is to provide a consistent styling framework and helper functions for graphics made in ggplot at the Suffolk County Council.

@@ -1,22 +1,13 @@
 name: "sccthemes"
 output_dir: "docs"
 exclude: ["README.Rmd", "README.md", "README.knit"]
-navbar:
-  title: "SCC Cookbook"
-  logo:
-    image: inst/logo/scc_logo.png
-    href: https://thomaszwagerman.github.io/sccthemes/
-  left:
-    - text: "Home"
-      href: index.html
-    - text: "Style Guide"
-      href: style_guide.html
-    - text: "Colour Guidance"
-      href: colour_guidance.html
-    - text: "Examples"
-      href: examples.html
-    - text: "About"
-      href: about.html
 output:
-  distill::distill_article:
+  html_document:
+    code_download: false
+    fig_caption: true
+    number_sections: false
+    self_contained: false
+    template: "_template.html"
     toc: true
+    toc_depth: 2
+    toc_float: false

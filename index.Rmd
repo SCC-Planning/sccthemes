@@ -1,11 +1,21 @@
 ---
 title: "SCC Cookbook"
-author:
-  - name: Thomas Zwagerman
-    url: https://github.com/thomaszwagerman
-    affiliation: Suffolk County Council
-    affiliation_url: https://www.suffolk.gov.uk/
-date: "`r Sys.Date()`"
+scctemplate:
+  index:
+    - text: "Style Guide"
+      href: style_guide.html
+    - text: "Colour Guidance"
+      href: colour_guidance.html
+    - text: "Examples"
+      href: examples.html
+    - text: "About"
+      href: about.html
+  header:
+    site_branding: "Suffolk County Council"
+  navigation:
+    breadcrumb_trail:
+      - text: "Home"
+toc: false
 ---
 ```{r, include = FALSE}
 knitr::opts_chunk$set(
@@ -16,11 +26,6 @@ knitr::opts_chunk$set(
 )
 ```
 
-# sccthemes <img src="inst/figures/scc-hex.png" align="right" width="120"/>
-
-<!-- badges: start -->
-[![Lifecycle: experimental](https://img.shields.io/badge/lifecycle-experimental-orange.svg)](https://lifecycle.r-lib.org/articles/stages.html#experimental)
-<!-- badges: end -->
 
 The goal of sccthemes is to provide a consistent styling framework and helper functions for graphics made in ggplot at the Suffolk County Council.
 
@@ -33,3 +38,4 @@ You can install the development version of sccthemes from [GitHub](https://githu
 ``` r
 # install.packages("devtools")
 devtools::install_github("thomaszwagerman/sccthemes")
+```

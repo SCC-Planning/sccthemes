@@ -1,11 +1,17 @@
 ---
 title: "Examples"
-author:
-  - name: Thomas Zwagerman
-    url: https://github.com/thomaszwagerman
-    affiliation: Suffolk County Council
-    affiliation_url: https://www.suffolk.gov.uk/
 date: "`r Sys.Date()`"
+scctemplate:
+  header:
+    site_branding: "Suffolk County Council"
+  navigation:
+    breadcrumb_trail:
+      - href: "index.html"
+        text: "Home"
+      - text: "Examples"
+    toc:
+      sticky: false
+      numbered: false
 ---
 
 ## Make a barchart
